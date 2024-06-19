@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit-user</title>
+    <style>
+      .maincon{height: 100vh;width: 100vw;display: flex;}
+      .conone{height: 100vh;width:60vw;}
+      .contwo{height: 100vh;width:40vw;}
+      .box{height: 80vh;width:40vw ;border-radius: 10px;margin-top: 50px;margin-left: 70px;box-shadow: 0.1px 4px 10px 1px;}
+      .nm{margin-left: 160px;padding-top: 35px;}
+      .hh{font-weight: lighter;font-size:17px;margin-left: 80px;margin-top: 20px;}
+      .gen{margin-left: 5px;}
+.star{margin-left: 120px;}
+.allcon{display: flex;height: 20px;width: 100%;align-items: center;justify-content: center;margin-top: 50px;}
+.rentl{height: 33px;width: 80%;background-color: #C6EBC5;font-weight: 600;display: flex;align-items: center;justify-content: center;}
+.rencon{height: 21px;width: 100%;display: flex;align-items: center;justify-content: center;margin-top: 20px;}
+.concon{height: 21px;width: 100%;display: flex;align-items: center;justify-content: start;margin-top: 25px;}
+.cont{background-color: #5e23dc;height: 33px;width: 40%;display: flex;align-items: center;justify-content: center;border-radius: 6px;color: white;margin-left:45px;}
+.cont2{border: 2px solid #FA7070;height: 33px;width: 40%;display: flex;align-items: center;justify-content: center;border-radius: 6px;margin-left:15px;font-weight: 200;font-size: small;}
+.mapp{margin-top: 50px;margin-left: 20px;height: fit-content;width: fit-content;border-radius: 100px;}
+.ani{animation: growF 3s linear infinite; }
+@keyframes growF{
+   0% {
+       opacity: 1;
+       transform: scale(0.8);
+   }
+   50% {
+       opacity: 1;
+       transform: scale(1);
+   }
+   100% {
+       opacity: 1;
+       transform: scale(0.8);
+   }
+}
+    </style>
+</head>
+
+<body>
+    <div class="stic">
+        <!-- navbar start -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Bachlor's HUB.com</a>
+    
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!-- <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/php/WTP/pro/main/index.html">Home</a>
+                        </li> -->
+    
+                        <li id="hom" style="text-decoration: none;color: black;">
+                            <a href="/php/WTP/pro/main/index.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="black" class="bi bi-house-door-fill" viewBox="0 0 16 16" >
+                                <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" href="index.html"/>
+                              </svg>
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item ">
+                            <a class="nav-link" href="\php\WTP\pro\zAbout\about.html">About</a>
+                        </li>
+                        <!-- users -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Users
+                            </a>
+                            <ul class="dropdown-menu">
+                             
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href= "\php\WTP\pro\zAdmin\verifyAdmin.php">Admin</a></li>
+                            </ul>
+                          </li>
+                         <!-- users end -->
+    
+                         <li id="tp">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16" onclick="scrollToTop()">
+      <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5" onclick="scrollToTop()"/>
+    </svg>
+                         </li>
+                        </ul>
+    
+                    </div>
+                    
+                </div>
+            </nav>
+            <!-- navbar End -->
+    <div class="msg">
+
+        <!-- <?php 
+//Database is
+$servername="localhost";
+ $username="root";
+ $passward="";
+ $dbname="phptut";
+ $conn= new mysqli( $servername,$username, $passward,$dbname);
+
+## Step 1 - Get user's data, by user id
+if (isset($_GET['id'])) {
+    $sql = "select * from copydb where id = " . $_GET['id'];
+    $result = $conn->query($sql);
+    $user = mysqli_fetch_assoc($result);
+  
+} else {
+    echo "<h1>Invalid request</h1>";
+    exit;
+}
+
+?>
+
+
+<?php echo $user['namef'] ?> -->
+        
+<div class="maincon">
+    <div class="conone">
+        <div class="box">
+            <h1 class="nm">North 37</h1>  
+            <div class="allcon">
+                <div class="gen"><strong>For/</strong>male</div>
+                <div class="star">
+                 3.4
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFAF45" class="bi bi-star" viewBox="0 0 16 16">
+                        <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFAF45" class="bi bi-star" viewBox="0 0 16 16">
+                        <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFAF45" class="bi bi-star" viewBox="0 0 16 16">
+                        <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFAF45" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFAF45" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                      </svg>
+                </div>
+            </div>
+
+            <h4 class="hh"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/></svg>
+               Mathura Nagar,cidco n6,Abad</h4>
+
+               <div class="rencon">
+                <div class="rentl">₹ 500/ Month</div>
+                 </div>
+
+                 <div class="concon">
+                    <div class="cont">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                          </svg>&nbsp;
+                        34567890987</div>
+        
+                        <div class="cont2">
+                       Upadted &nbsp 21/23/2004 saturday <span class="css-1t0db8o"><span class="css-1n1quf5"></span></span>
+                        </div>
+                     </div>  
+                     <div class="mapp">
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120073.07855586728!2d75.22279919752334!3d19.870238759732935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb9815a369bc63%3A0x712d538b29a2a73e!2sAurangabad%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1712841330630!5m2!1sen!2sin" width="470px" height="210" style="border:0;border-radius: 10px;;box-shadow: 0.1px 4px 10px 1px;"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+        </div>
+    </div>
+
+
+
+    <div class="contwo">
+        <img src="main2.jpg" alt="img" height="170px" width="500px" style="margin-right: 50px;z-index: 10;">
+        <div class="ani">
+        <img class="ani" src="logo2.jpg" alt="img" style=" height: 407px;margin-top: 0px;z-index: 1;">
+    </div>
+    </div>
+</div>
+
+
+    </div>
+</body>
+
+</html>
